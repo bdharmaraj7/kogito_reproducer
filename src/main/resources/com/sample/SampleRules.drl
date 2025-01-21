@@ -1,0 +1,20 @@
+package com.sample;
+
+global Result result;
+
+rule "Sample rule 1"
+    ruleflow-group "samplegroup"
+    when
+        Loan()
+    then
+        System.out.println("Sample rule 1 fired");
+        result.setValid(true);
+end
+
+rule "Sample rule 2"
+    ruleflow-group "samplegroup"
+    when
+        Loan(paymentAmount > 2000)
+    then
+        System.out.println("Sample rule 2 fired");
+end
