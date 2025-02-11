@@ -12,14 +12,14 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus-plugin.version>2.16.10.Final</quarkus-plugin.version>
+        <quarkus-plugin.version>3.8.4</quarkus-plugin.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-        <quarkus.platform.version>2.16.10.Final</quarkus.platform.version>
+        <quarkus.platform.version>3.8.4</quarkus.platform.version>
         <kogito.bom.group-id>org.kie.kogito</kogito.bom.group-id>
         <kogito.bom.artifact-id>kogito-bom</kogito.bom.artifact-id>
-        <kogito.bom.version>1.44.1.Final</kogito.bom.version>
-        <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>
+        <kogito.bom.version>10.0.0</kogito.bom.version>
+        <version.org.kie.kogito>10.0.0</version.org.kie.kogito>
         <surefire-plugin.version>3.5.0</surefire-plugin.version>
     </properties>
 
@@ -43,9 +43,15 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--
         <dependency>
             <groupId>org.kie.kogito</groupId>
             <artifactId>kogito-quarkus-rules</artifactId>
+        </dependency>
+        -->
+         <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-quarkus-rules</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
